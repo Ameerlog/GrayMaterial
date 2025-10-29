@@ -1,63 +1,97 @@
-"use client";
-import React, { useState, memo } from "react";
-import { FiChevronDown } from "react-icons/fi"; 
+import React, { useState } from "react";
+import { Plus, Minus } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { faqs } from "../db/faq";
 
-const FAQItem = memo(function FAQItem({ idx, isOpen, toggle, question, answer }) {
-  return (
-    <div className="border border-gray-200 rounded-lg">
-      <button
-        onClick={() => toggle(idx)}
-        aria-expanded={isOpen}
-        aria-controls={`faq-panel-${idx}`}
-        className="w-full flex justify-between items-center p-4 text-left text-lg sm:text-xl font-medium text-gray-800 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-400 transition-colors"
-      >
-        {question}
-        <FiChevronDown
-          className={`ml-2 transform transition-transform duration-300 ${
-            isOpen ? "rotate-180" : ""
-          }`}
-          size={20}
-        />
-      </button>
-
-      <div
-        id={`faq-panel-${idx}`}
-        role="region"
-        aria-hidden={!isOpen}
-        className={`overflow-hidden transition-[max-height] duration-500 ease-in-out ${
-          isOpen ? "max-h-40 sm:max-h-60 p-4" : "max-h-0 p-0"
-        }`}
-      >
-        <p className="text-gray-600 leading-relaxed">{answer}</p>
-      </div>
-    </div>
-  );
-});
-
-export default function FAQ() {
+const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
-  const toggle = (idx) => setOpenIndex(openIndex === idx ? null : idx);
 
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white dark:bg-black py-20 px-6 md:px-10">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-red-600 text-center mb-12">
-          Frequently Asked Questions
-        </h2>
+       
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            Frequently Asked Questions
+          </h2>
+        </motion.div>
 
-        <div className="space-y-4">
-          {faqs.map((faq, idx) => (
-            <FAQItem
-              key={faq.question}
-              idx={idx}
-              isOpen={openIndex === idx}
-              toggle={toggle}
-              {...faq}
-            />
+        <div className="space-y-0 border-t border-gray-200 dark:border-zinc-800">
+          {faqs.map((faq, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              onHoverStart={() => setOpenIndex(index)}
+              onHoverEnd={() => setOpenIndex(null)}
+              className="border-b border-gray-200 dark:border-zinc-800 relative"
+            >
+             
+              <motion.div
+                className="absolute inset-0 bg-gray-50 dark:bg-zinc-900/30 rounded-lg"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: openIndex === index ? 1 : 0 }}
+                transition={{ duration: 0.2 }}
+              />
+              <div className="w-full flex items-start justify-between gap-6 py-6 relative z-10">
+                <motion.span
+                  className="text-lg md:text-xl font-medium text-gray-900 dark:text-white"
+                  animate={{ x: openIndex === index ? 4 : 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {faq.question}
+                </motion.span>
+
+                <motion.div
+                  className="flex-shrink-0 w-6 h-6 flex items-center justify-center"
+                  animate={{ 
+                    scale: openIndex === index ? 1.2 : 1,
+                    rotate: openIndex === index ? 180 : 0 
+                  }}
+                  transition={{ duration: 0.3, type: "spring", stiffness: 200 }}
+                >
+                  {openIndex === index ? (
+                    <Minus className="w-5 h-5 text-gray-900 dark:text-white" />
+                  ) : (
+                    <Plus className="w-5 h-5 text-gray-900 dark:text-white" />
+                  )}
+                </motion.div>
+              </div>
+              <AnimatePresence initial={false}>
+                {openIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="overflow-hidden relative z-10"
+                  >
+                    <motion.p
+                      initial={{ y: -10 }}
+                      animate={{ y: 0 }}
+                      exit={{ y: -10 }}
+                      transition={{ duration: 0.2 }}
+                      className="text-base text-gray-600 dark:text-gray-400 leading-relaxed pr-12 pb-6"
+                    >
+                      {faq.answer}
+                    </motion.p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default FAQ;
