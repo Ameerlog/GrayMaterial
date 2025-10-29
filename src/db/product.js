@@ -7,7 +7,7 @@ import { Layers, Wrench, Construction,  ToyBrick } from 'lucide-react';
 export const products = [
   {
     id: "1",
-    name: "OPC 53 Grade Cement",
+    name: "Coarse aggregates",
     category: "Concrete & Cement",
     img: [Cement],
     images: [Cement, Cement, Cement],
@@ -34,7 +34,7 @@ export const products = [
   },
   {
     id: "2",
-    name: "Fe 500D TMT Steel Bar",
+    name: "Ready-Mix Concrete (RMC)",
     category: "Steel & Rebar",
     img: [Steel],
     images: [Steel, Steel, Steel],
@@ -61,7 +61,7 @@ export const products = [
   },
   {
     id: "3",
-    name: "Concrete M Sand",
+    name: "M‑Sand (Manufactured Sand)",
     category: "Aggregates & Sand",
     img: [MSand],
     images: [MSand, MSand, MSand],
@@ -88,7 +88,28 @@ export const products = [
   },
   {
     id: "4",
-    name: "AAC Blocks",
+    name: "Plaster Sand (P‑Sand)",
+    category: "Roofing Materials",
+    img: [Bricks],
+    images: [Bricks, Bricks, Bricks],
+    price: "₹55 per BLOCK",
+    description: "Lightweight and eco-friendly blocks for walling.",
+    icon: ToyBrick,  
+    supplier: "EcoBlocks Co.",
+    composition: "Autoclaved aerated concrete",
+    usage: "Wall construction for residential and commercial buildings",
+    storage: "Keep covered and dry",
+    warranty: "2-year limited warranty",
+    keyFeatures: [
+      "Lightweight",
+      "Fire Resistant",
+      "Thermal Insulation",
+      "Eco-Friendly"
+    ],
+  },
+    {
+    id: "4",
+    name: "Plaster Sand (P‑Sand)",
     category: "Roofing Materials",
     img: [Bricks],
     images: [Bricks, Bricks, Bricks],

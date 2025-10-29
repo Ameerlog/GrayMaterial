@@ -1,63 +1,38 @@
 "use client";
-import React, { useState, memo } from "react";
-import { FiChevronDown } from "react-icons/fi"; 
+import React, { memo } from "react";
 import { faqs } from "../db/faq";
 
-const FAQItem = memo(function FAQItem({ idx, isOpen, toggle, question, answer }) {
+const FAQItem = memo(function FAQItem({ question, answer }) {
   return (
-    <div className="border border-gray-200 rounded-lg">
-      <button
-        onClick={() => toggle(idx)}
-        aria-expanded={isOpen}
-        aria-controls={`faq-panel-${idx}`}
-        className="w-full flex justify-between items-center p-4 text-left text-lg sm:text-xl font-medium text-gray-800 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-400 transition-colors"
-      >
-        {question}
-        <FiChevronDown
-          className={`ml-2 transform transition-transform duration-300 ${
-            isOpen ? "rotate-180" : ""
-          }`}
-          size={20}
-        />
-      </button>
+    <div className="bg-gray-800/40 dark:bg-zinc-800/40 border border-white/10 rounded-xl backdrop-blur-md shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden group cursor-pointer">
+      <div className="p-5 flex justify-between items-center">
+        <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-gray-100 transition-colors duration-300">
+          {question}
+        </h3>
+      </div>
 
-      <div
-        id={`faq-panel-${idx}`}
-        role="region"
-        aria-hidden={!isOpen}
-        className={`overflow-hidden transition-[max-height] duration-500 ease-in-out ${
-          isOpen ? "max-h-40 sm:max-h-60 p-4" : "max-h-0 p-0"
-        }`}
-      >
-        <p className="text-gray-600 leading-relaxed">{answer}</p>
+      <div className="max-h-0 opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-700 ease-in-out px-5 pb-5">
+        <p className="text-gray-300 text-sm leading-relaxed">{answer}</p>
       </div>
     </div>
   );
 });
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState(null);
-  const toggle = (idx) => setOpenIndex(openIndex === idx ? null : idx);
-
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-red-600 text-center mb-12">
+    <section className="bg-gradient-to-b from-white to-gray-50 dark:from-zinc-900 dark:to-zinc-950 py-20 px-6 md:px-10">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-800 dark:text-white mb-12 tracking-tight">
           Frequently Asked Questions
         </h2>
 
-        <div className="space-y-4">
+        <div className="space-y-6">
           {faqs.map((faq, idx) => (
-            <FAQItem
-              key={faq.question}
-              idx={idx}
-              isOpen={openIndex === idx}
-              toggle={toggle}
-              {...faq}
-            />
+            <FAQItem key={idx} {...faq} />
           ))}
         </div>
       </div>
     </section>
   );
 }
+
