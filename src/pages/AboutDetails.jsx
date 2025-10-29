@@ -11,12 +11,6 @@ const processSteps = [
   { id: 4, imgSrc: bricks, title: "Project Support", description: "Our expert team provides technical support and consultation throughout your construction project lifecycle.", icon: "🤝" },
 ];
 
-const testimonials = [
-  { name: "Michael Rodriguez", location: "Phoenix, AZ", company: "Rodriguez Construction Co.", quote: "Outstanding quality materials and exceptional service. They've been our trusted supplier for over 8 years, never compromising on deadlines or quality standards.", img: bricks, rating: 5, project: "Commercial Complex" },
-  { name: "Sarah Chen", location: "Seattle, WA", company: "Pacific Builders Inc.", quote: "Their innovative approach to material sourcing and sustainability has transformed how we approach green construction projects.", img: cement, rating: 5, project: "Eco-Residential Development" },
-  { name: "David Thompson", location: "Dallas, TX", company: "Thompson Infrastructure", quote: "Reliable, professional, and always delivering exactly what they promise. Their technical expertise has saved us countless hours on complex projects.", img: steel, rating: 5, project: "Highway Infrastructure" },
-  { name: "Lisa Park", location: "Miami, FL", company: "Coastal Construction Group", quote: "Premium materials that withstand harsh weather conditions. Their support team's knowledge of local building codes is invaluable.", img: bricks, rating: 5, project: "Waterfront Development" },
-];
 
 const gallery = [
   { img: bricks, title: "Premium Brick Collection", category: "Masonry" },
@@ -193,23 +187,7 @@ const AboutSection = () => {
         </div>
       </div>
 
-      {/* Testimonials Section */}
-      <div className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6 lg:px-20">
-          <h3 className="text-4xl font-bold text-gray-900 text-center mb-12">Testimonials</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {testimonials.map((t, idx) => (
-              <div key={idx} className="bg-white rounded-xl shadow-lg p-6 text-center transform transition duration-500 hover:scale-105">
-                <img src={t.img} alt={t.name} className="w-24 h-24 object-cover rounded-full mx-auto mb-4" />
-                <h4 className="font-bold text-gray-900">{t.name}</h4>
-                <p className="text-gray-600 text-sm mb-2">{t.company}, {t.location}</p>
-                <p className="text-gray-700 text-sm mb-2">"{t.quote}"</p>
-                <p className="text-blue-500">⭐ {t.rating}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+     
 
       {/* Certifications Marquee */}
       <div className="py-10 overflow-hidden bg-white">

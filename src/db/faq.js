@@ -1,32 +1,32 @@
 export const faqs = [
   {
-    question: "What makes Gray Materials different from other suppliers?",
+    question: "What materials do you supply?",
     answer:
-      "Gray Materials stands out for its commitment to quality, government-approved standards, and reliable delivery. Every batch undergoes strict quality checks to ensure consistency and performance.",
+      "Yes, we offer doorstep delivery directly to construction sites with full logistics support.",
   },
   {
-    question: "Do you provide delivery outside Pune or Goa?",
+    question: " Which cities do you serve?",
     answer:
-      "Yes. We provide doorstep delivery not only across Pune and Goa but also pan-India. Our logistics partners ensure timely and safe transportation to your construction site.",
+      "We currently supply to Mumbai, Pune, Hubli, Belgaum, and nearby industrial regions.",
   },
   {
-    question: "Can Gray Materials handle bulk or OEM orders?",
+    question: "How can I place a bulk order?",
     answer:
-      "Absolutely. We are fully equipped to fulfill bulk, OEM, and export-ready orders with consistent grading and packaging as per client requirements.",
+      "You can contact us via phone, WhatsApp, or fill out the enquiry form with your material, quantity, and site location.",
   },
   {
-    question: "How do you ensure material quality and consistency?",
+    question: "What is the minimum order quantity?",
     answer:
-      "Our materials comply with BIS standards and undergo multiple quality inspections. We supply only moisture-free, properly graded materials to maintain long-term durability in construction.",
+      "The minimum order starts from 17 tons for sand and aggregates, and concrete.",
   },
   {
-    question: "What types of materials do you supply?",
+    question: " Are the materials quality tested?",
     answer:
-      "We supply a wide range of construction materials such as cement, sand, aggregates, steel, and other building essentials—available for retail and bulk purchase.",
+      "Yes, all materials are IS-certified and lab-tested for strength, grade, and purity.",
   },
   {
-    question: "How can I get a quotation or place an order?",
+    question: "Do you provide rates or quotation before order?",
     answer:
-      "You can contact our customer support team via phone or email to request a quotation. Orders can also be placed directly through our online or offline sales team for quick processing.",
+      "Yes, we provide the best price quotation based on current market rates and order quantity.",
   },
 ];

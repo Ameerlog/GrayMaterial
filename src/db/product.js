@@ -1,9 +1,9 @@
-import MSand from "../assets/Bricks.jpeg";
+import MSand from "../assets/image4.png";
 import PSand from "../assets/Cement.jpeg";
-import Aggregates from "../assets/image1.jpeg";
-import RMC from "../assets/image11.jpg";
-import Precast from "../assets/Steelbar.jpeg";
-import Pavers from "../assets/image10.jpg";
+import Aggregates from "../assets/MSand.jpeg";
+import RMC from "../assets/Cement.jpeg";
+import Precast from "../assets/image1.jpeg";
+import Pavers from "../assets/image12.jpg";
 import ConcreteBlocks from "../assets/image12.jpg";
 import { Construction, Hammer, Boxes, Truck, Building2, Square, ToyBrick } from 'lucide-react';
 

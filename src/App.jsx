@@ -16,6 +16,7 @@ import Brands from "./components/Brands";
 import FAQ from "./components/Faq";
 import { Phone } from "lucide-react";
 import Loader from "./components/ui/Loaders";
+import AllProducts from "./components/AllProducts";
 
 
 
@@ -63,14 +64,15 @@ const App = () => {
                   <Hero />
                   <AboutUs/>
                  
-                {/* <Products /> */}
+                <Products />
                   <Technology />
                   
-                  <GalleryPreview/>
+                  
                   <Brands/>
-                  <Testimonials />
-                  <FAQ />
-                  <BlogList/>
+       
+             
+                 
+                    <FAQ />
                   <Contact />
                 
                 </>
@@ -79,13 +81,11 @@ const App = () => {
 
             {/* Dynamic Product Page */}
             <Route path="/contact" element={<Contact/>}/>
-            <Route path="/products" element={<Products />}/>
+            <Route path="/products" element={<AllProducts/>}/>
             <Route path="/product/:id" element={<ProductDetail />} />
-            <Route path="/gallery" element={<GalleryPage/>} />
+          
             <Route path="/aboutUs" element={<AboutSection/>}/>
-            <Route path="/blogs" element={<BlogList/>} />
-            <Route path="/blogs/:id" element={<BlogDetail/>} />
-            <Route path="/blogs/:id" element={<BlogDetail/>} />
+            
           </Routes>
           </main>
           <a href="https://wa.me/+91-8085758575"
