@@ -13,6 +13,7 @@ import AboutSection from "./pages/AboutDetails";
 import BlogList from "./components/Blogs";
 import BlogDetail from "./pages/BlogDetails";
 import Brands from "./components/Brands";
+import FAQ from "./components/Faq";
 import { Phone } from "lucide-react";
 import Loader from "./components/ui/Loaders";
 
@@ -62,12 +63,13 @@ const App = () => {
                   <Hero />
                   <AboutUs/>
                  
-                <Products />
+                {/* <Products /> */}
                   <Technology />
                   
                   <GalleryPreview/>
                   <Brands/>
                   <Testimonials />
+                  <FAQ />
                   <BlogList/>
                   <Contact />
                 
@@ -82,6 +84,7 @@ const App = () => {
             <Route path="/gallery" element={<GalleryPage/>} />
             <Route path="/aboutUs" element={<AboutSection/>}/>
             <Route path="/blogs" element={<BlogList/>} />
+            <Route path="/blogs/:id" element={<BlogDetail/>} />
             <Route path="/blogs/:id" element={<BlogDetail/>} />
           </Routes>
           </main>
