@@ -8,10 +8,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 
-// Images
-import image1 from "../assets/images/ffnvj7ks8zyayhelmgx3.webp";
-import image2 from "../assets/images/u6oo58xtozpxidr6ifjt.webp";
-import image3 from "../assets/images/b6mpn0np7q7qmucsbmnl.webp";
+
+import image1 from "../assets/images/Ready mix concrete.webp";
+import image2 from "../assets/images/Solid concrete blocks.webp";
+import image3 from "../assets/images/Paver blocks.webp";
 
 const AboutUs = () => {
   const [activeTab, setActiveTab] = useState("mission");
@@ -56,7 +56,7 @@ const AboutUs = () => {
   const images = useMemo(() => [image1, image2, image3], []);
 
   return (
-    <section className="py-24 bg-white dark:bg-zinc-900 transition-colors duration-500">
+    <section id="about" className="py-24 bg-white dark:bg-zinc-900 transition-colors duration-500" >
       <div className="max-w-7xl mx-auto px-6 lg:px-20">
         <div className="text-center mb-16">
           <p className="text-blue-600 font-semibold uppercase tracking-wide text-sm mb-2">
@@ -69,7 +69,7 @@ const AboutUs = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Image Carousel */}
+
           <div className="relative w-full h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl">
             <Swiper
               modules={[Navigation, EffectFade, Autoplay]}
@@ -94,7 +94,7 @@ const AboutUs = () => {
             </Swiper>
           </div>
 
-          {/* Content */}
+
           <div>
             <div className="flex gap-2 mb-6 bg-gray-100 dark:bg-zinc-800 p-1 rounded-xl">
               {tabs.map((tab) => (
@@ -120,7 +120,7 @@ const AboutUs = () => {
               ))}
             </div>
 
-            {/* Stats */}
+        
             <div className="grid grid-cols-3 gap-6 mt-12 pt-6 border-t border-gray-200 dark:border-zinc-700">
               {stats.map((stat, idx) => (
                 <div key={idx} className="text-center">

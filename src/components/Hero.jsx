@@ -8,25 +8,26 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 
-// Your images
-import hero1 from "../assets/Hero.webp";
-import hero2 from "../assets/images/b6mpn0np7q7qmucsbmnl.webp";
-import hero3 from "../assets/images/b6mpn0np7q7qmucsbmnl.webp";
+
+import hero1 from "../assets/images/main01.webp";
+import hero2 from "../assets/images/main 02.webp";
+import hero3 from "../assets/images/Main 03.webp";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
     image: hero1,
     title: "Top-Quality Construction Materials Delivered",
     subtitle:
-      "Bridging supply and demand for construction needs with over 15 years of experience.",
-    stats: ["15+ Years Experience", "1000+ Projects"],
+      "GrayMaterial Delivers Premium grade Materials trusted by contractors,builders & developers.",
+    stats: ["Every Product is crafted for Strength Consistency and Long Lasting Performance"],
     accent: "from-blue-400 to-blue-600",
   },
   {
     image: hero2,
     title: "Building Dreams with Reliable Supply",
     subtitle:
-      "We provide consistent, trustworthy supply chains for all your construction projects.",
+      "We Believe that every great structure begins with great Foundation ",
     stats: ["On-time Delivery", "Nationwide Network"],
     accent: "from-emerald-400 to-green-600",
   },
@@ -59,7 +60,7 @@ const HeroSlider = () => {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            {/* Background image */}
+          
             <div className="relative h-screen w-full overflow-hidden">
               <img
                 src={slide.image}
@@ -68,10 +69,10 @@ const HeroSlider = () => {
                 className="absolute inset-0 h-full w-full object-cover scale-110 animate-kenburns"
               />
 
-              {/* Gradient overlay */}
+              
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
 
-              {/* Content */}
+          
               <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-6">
                 <h1 className="text-3xl md:text-5xl font-bold text-white animate-fadeInUp">
                   {slide.title}
@@ -101,20 +102,16 @@ const HeroSlider = () => {
         ))}
       </Swiper>
 
-      {/* Custom navigation */}
+     
       <button className="swiper-button-prev-custom absolute left-6 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 hover:bg-white/40 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
+        <ChevronLeft className="h-6 w-6 text-white" strokeWidth={2} />
       </button>
 
       <button className="swiper-button-next-custom absolute right-6 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 hover:bg-white/40 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
+        <ChevronRight className="h-6 w-6 text-white" strokeWidth={2} />
       </button>
 
-      {/* Progress bar */}
+    
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
         {slides.map((slide, index) => (
           <div key={index} className="w-20 h-1 bg-white/20 rounded-full overflow-hidden">

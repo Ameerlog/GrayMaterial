@@ -1,4 +1,4 @@
-// Services.jsx
+
 import React from "react";
 import { HardHat, Hammer, Building, Cube, Layers } from "lucide-react";
 
@@ -59,4 +59,4 @@ const Services = () => {
   );
 };
 
-export default Services; // ✅ Correct export
+export default Services; 

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const AllProducts = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50 dark:from-zinc-950 dark:via-black dark:to-zinc-950">
-      {/* Header */}
+  
       <section className="relative pt-32 pb-20 px-6 md:px-12 lg:px-20 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -23,8 +23,8 @@ const AllProducts = () => {
         </motion.div>
       </section>
 
-      {/* Product Grid */}
-      <section className="px-6 md:px-12 lg:px-20 pb-24">
+    
+      <section className="px-8 md:px-12 lg:px-20 pb-28">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {products.map((product, index) => (
             <motion.div
@@ -45,7 +45,7 @@ const AllProducts = () => {
                     />
                   </div>
 
-                  {/* Details */}
+
                   <div className="p-5">
                     <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                       {product.name}

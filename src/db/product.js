@@ -1,10 +1,10 @@
-import MSand from "../assets/image4.png";
-import PSand from "../assets/Cement.jpeg";
-import Aggregates from "../assets/MSand.jpeg";
-import RMC from "../assets/Cement.jpeg";
-import Precast from "../assets/image1.jpeg";
-import Pavers from "../assets/image12.jpg";
-import ConcreteBlocks from "../assets/image12.jpg";
+import MSand from "../assets/images/M sand.webp";
+import PSand from "../assets/images/PSAND.webp";
+import Aggregates from "../assets/images/Aggregates.webp";
+import RMC from "../assets/images/Ready mix concrete.webp";
+import Precast from "../assets/images/Precast products.webp";
+import Pavers from "../assets/images/Paver blocks.webp";
+import ConcreteBlocks from "../assets/images/Solid concrete blocks.webp";
 import { Construction, Hammer, Boxes, Truck, Building2, Square, ToyBrick } from 'lucide-react';
 
 export const products = [
@@ -24,6 +24,7 @@ export const products = [
       "Widely used for RCC slabs, beams, columns, and foundation work",
       "Superior bonding and durability"
     ],
+    details:"M-Sand is a high-quality crushed stone sand specially processed for use in concrete and structural construction. It offers excellent strength, uniform particle size, and is completely free from silt or impurities. It is the best replacement for river sand and is widely used for RCC slabs, beams, columns, and foundation work due to its superior bonding and durability.",
     technicalSpecs: [
       { label: "Particle Size", value: "0-4.75mm" },
       { label: "Moisture Content", value: "<2%" },
@@ -47,6 +48,7 @@ export const products = [
       "Premium surface finish for painting",
       "Perfect for wall finishing works"
     ],
+     details:"M-Sand is a high-quality crushed stone sand specially processed for use in concrete and structural construction. It offers excellent strength, uniform particle size, and is completely free from silt or impurities. It is the best replacement for river sand and is widely used for RCC slabs, beams, columns, and foundation work due to its superior bonding and durability.",
     technicalSpecs: [
       { label: "Particle Size", value: "0-2mm" },
       { label: "Moisture Content", value: "<1.5%" },
@@ -70,6 +72,7 @@ export const products = [
       "Ensures long-lasting stability for both residential and large infrastructure projects",
       "Premium quality aggregates"
     ],
+     details:"M-Sand is a high-quality crushed stone sand specially processed for use in concrete and structural construction. It offers excellent strength, uniform particle size, and is completely free from silt or impurities. It is the best replacement for river sand and is widely used for RCC slabs, beams, columns, and foundation work due to its superior bonding and durability.",
     technicalSpecs: [
       { label: "Available Sizes", value: "6mm, 12mm, 20mm, 40mm" },
       { label: "Crushing Value", value: "<30%" },
@@ -93,6 +96,7 @@ export const products = [
       "Ideal for commercial buildings and residential projects",
       "Perfect for industrial constructions and infrastructure works"
     ],
+     details:"M-Sand is a high-quality crushed stone sand specially processed for use in concrete and structural construction. It offers excellent strength, uniform particle size, and is completely free from silt or impurities. It is the best replacement for river sand and is widely used for RCC slabs, beams, columns, and foundation work due to its superior bonding and durability.",
     technicalSpecs: [
       { label: "Available Grades", value: "M15, M20, M25, M30, M35, M40" },
       { label: "Slump Value", value: "100-150mm" },
@@ -116,6 +120,7 @@ export const products = [
       "Widely used for infrastructure and industrial projects",
       "Long-term durability for real estate development projects"
     ],
+     details:"M-Sand is a high-quality crushed stone sand specially processed for use in concrete and structural construction. It offers excellent strength, uniform particle size, and is completely free from silt or impurities. It is the best replacement for river sand and is widely used for RCC slabs, beams, columns, and foundation work due to its superior bonding and durability.",
     technicalSpecs: [
       { label: "Product Types", value: "Slabs, Walls, Kerbs, Drains" },
       { label: "Strength Grade", value: "M30-M40" },
@@ -139,6 +144,7 @@ export const products = [
       "Attractive aesthetic finish to enhance the overall landscape",
       "Superior quality for long-lasting outdoor use"
     ],
+     details:"M-Sand is a high-quality crushed stone sand specially processed for use in concrete and structural construction. It offers excellent strength, uniform particle size, and is completely free from silt or impurities. It is the best replacement for river sand and is widely used for RCC slabs, beams, columns, and foundation work due to its superior bonding and durability.",
     technicalSpecs: [
       { label: "Size", value: "200 x 100 x 60/80mm" },
       { label: "Compressive Strength", value: "30-40 N/mm²" },
@@ -162,6 +168,7 @@ export const products = [
       "Superior alternative to traditional bricks",
       "Long-term structural stability"
     ],
+     details:"M-Sand is a high-quality crushed stone sand specially processed for use in concrete and structural construction. It offers excellent strength, uniform particle size, and is completely free from silt or impurities. It is the best replacement for river sand and is widely used for RCC slabs, beams, columns, and foundation work due to its superior bonding and durability.",
     technicalSpecs: [
       { label: "Size", value: "400 x 200 x 200 mm" },
       { label: "Density", value: "2000-2200 kg/m³" },

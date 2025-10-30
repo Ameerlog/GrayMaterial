@@ -1,7 +1,7 @@
 
 
 import React from "react";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/images/Logo.png";
 import { Linkedin, Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
@@ -21,8 +21,8 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="/gallery"  className="hover:underline">
-                Gallery
+              <a href="/aboutUs"  className="hover:underline">
+                AboutUs
               </a>
             </li>
             <li>

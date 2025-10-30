@@ -114,17 +114,17 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">
-            Contact our <span className="text-blue-600">friendly team</span>
+          <h2 className="text-7xl md:text-4xl font-bold sm:text-3xl text-zinc-900 dark:text-white">
+            Contact our <span className="text-blue-600 ">Friendly team</span>
           </h2>
           <p className="text-zinc-600 dark:text-zinc-300 mt-3">
             Ready to start? Let’s chat about how we can help.
           </p>
         </motion.div>
 
-        {/* Layout: Form + Map */}
+ 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-          {/* --- Form --- */}
+        
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -140,8 +140,7 @@ const Contact = () => {
               className="space-y-6"
             >
 
-              
-              {/* Name Fields */}
+          
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -172,7 +171,7 @@ const Contact = () => {
                 </motion.div>
               </div>
 
-              {/* Email */}
+      
               <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Email
@@ -188,7 +187,7 @@ const Contact = () => {
                 />
               </motion.div>
 
-              {/* Company & Phone */}
+  
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -221,7 +220,6 @@ const Contact = () => {
                 </motion.div>
               </div>
 
-              {/* City & State */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -252,7 +250,6 @@ const Contact = () => {
                 </motion.div>
               </div>
 
-              {/* Requirements */}
               <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Requirements
@@ -268,7 +265,7 @@ const Contact = () => {
                 ></textarea>
               </motion.div>
 
-              {/* Submit Button */}
+   
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
@@ -291,7 +288,7 @@ const Contact = () => {
               </motion.button>
             </motion.form>
 
-            {/* Contact Info Below */}
+     
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -319,7 +316,7 @@ const Contact = () => {
             </motion.div>
           </motion.div>
 
-          {/* --- Map --- */}
+  
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}

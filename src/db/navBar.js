@@ -3,7 +3,8 @@ import { products } from "../db/product";
 export const navigationData = {
   mainLinks: [
     { id: 1, label: "Home", path: "/", type: "link" },
-    { id: 2, label: "Whom We Serve", sectionId: "technology", type: "scroll" },
+    {id:2,label:"About",sectionId:"about",type:"scroll"},
+    // { id: 2, label: "Whom We Serve", sectionId: "technology", type: "scroll" },
     { id: 3, label: "Products", path: "/products", type: "mega" },
     // { id: 4, label: "Gallery", path: "/gallery", type: "link" },
     // { id: 5, label: "Blogs", sectionId: "blogs", type: "scroll" },

@@ -1,27 +1,37 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// Brand logos
-import brand1 from "../assets/Bricks.jpeg";
-import brand2 from "../assets/Cement.jpeg";
-import brand3 from "../assets/image11.jpg";
-import brand4 from "../assets/Steelbar.jpeg";
-import brand5 from "../assets/MSand.jpeg";
+
+import brand1 from "../assets/clients/foxcon.jpg";
+import brand2 from "../assets/clients/iit dharwad.jpg";
+import brand3 from "../assets/clients/infosys.png";
+import brand4 from "../assets/clients/inorbit.jpg";
+import brand5 from "../assets/clients/kud.jpg";
+import brand6 from  "../assets/clients/marvel.jpg";
+import brand7 from "../assets/clients/nexus.jpg";
+import brand8 from "../assets/clients/onehubli.jpg";
+import brand9 from "../assets/clients/tata hitachi.jpg";
+import brand10 from "../assets/clients/tata motors.png";
 
 const Brands = () => {
   const brands = [
-    { img: brand1, name: "Premium Bricks" },
-    { img: brand2, name: "Cement Solutions" },
-    { img: brand3, name: "Construction Materials" },
-    { img: brand4, name: "Steel Industries" },
-    { img: brand5, name: "M Sand Suppliers" },
+    { img: brand1, name: "Foxconn" },
+    { img: brand2, name: "IIT Dharwad" },
+    { img: brand3, name: "Infosys" },
+    { img: brand4, name: "Inorbit" },
+    { img: brand5, name: "Tata Motors" },
+    { img: brand6, name: "Kud" },
+    { img: brand7, name: "Nexus" },
+    { img: brand8, name: "One Hubli" },
+    { img: brand9, name: "Tata Hitachi" },
+    { img: brand10, name: "Tata Motors" },
   ];
 
   const duplicatedBrands = [...brands, ...brands];
 
   return (
     <section className="py-20 px-6 md:px-16 bg-white dark:bg-zinc-900">
-      {/* Header */}
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +51,7 @@ const Brands = () => {
 
         <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white dark:from-zinc-900 dark:to-transparent z-10 pointer-events-none" />
 
-        {/* Scrolling Logos */}
+
         <div className="flex animate-scroll space-x-16 py-10">
           {duplicatedBrands.map((brand, index) => (
             <motion.div
@@ -62,7 +72,7 @@ const Brands = () => {
         </div>
       </div>
 
-      {/* CSS Animation */}
+
       <style jsx>{`
         @keyframes scroll {
           0% {
